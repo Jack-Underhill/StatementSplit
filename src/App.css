@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F3F4F6;             /* bg-gray-100 — slightly darker */
+  --color-card-bg: #FFFFFF;        /* white — clean, consistent */
+  --color-border: #D1D5DB;         /* gray-300 — same */
+
+  --color-text-prim: #111827;      /* gray-900 — primary */
+  --color-text-sec: #4B5563;       /* gray-600 — secondary */
+  --color-text-bg: #E0E7FF;        /* indigo-100 — highlight for headers */
+  --color-text-fn: #1F2937;        /* gray-800 — filenames */
+
+  --color-btn-prim: #4F46E5;       /* indigo-600 */
+  --color-btn-hover: #4338CA;      /* indigo-700 */
+  --color-btn-text: #FFFFFF;
+
+  --color-thead-bg: #E5E7EB;       /* gray-200 — more contrast w/ rows */
+  --color-trow-even: #F9FAFB;      /* gray-50 — subtle */
+  --color-trow-odd: #F1F5F9;       /* slate-100 — more separation */
+  --color-trow-hover: #E0E7FF;     /* indigo-100 — ties with text-bg */
+}
+
+html, body, #root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--color-bg);
+}
