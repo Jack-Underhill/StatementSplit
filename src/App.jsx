@@ -3,6 +3,7 @@ import Papa from 'papaparse';
 
 import './App.css';
 
+import DisclaimerBanner from './components/DisclaimerBanner';
 import UploadStatement from './components/UploadStatement';
 import TransactionTable from './components/TransactionTable';
 import Summary from './components/Summary';
@@ -112,6 +113,9 @@ function App() {
           Shared Expense Tracker
         </div>
 
+        <DisclaimerBanner
+          sectionHClass={sectionHClass}
+        />
         <UploadStatement 
           sectionHClass={sectionHClass}
           itemBClass={itemBClass}

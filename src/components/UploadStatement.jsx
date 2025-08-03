@@ -45,7 +45,7 @@ function UploadStatement({ sectionHClass, itemBClass, onFilesSelected }) {
             <div className="p-2 flex gap-3 items-center border-1 border-(--color-border) rounded-md">
                 <button 
                     onClick={handleClick}
-                    className={`${itemBClass} px-2 py-1.5 border-1 border-(--color-border) rounded-md bg-(--color-btn-prim) hover:bg-(--color-btn-hover) hover:shadow-md hover:animate-pulse transition duration-150 text-(--color-btn-text)`}
+                    className={`${itemBClass} px-2 py-1.5 cursor-pointer border-1 border-(--color-border) rounded-md bg-(--color-btn-prim) hover:bg-(--color-btn-hover) hover:shadow-md hover:animate-pulse transition duration-150 text-(--color-btn-text)`}
                 >
                     Choose File (.CSV)
                 </button>
