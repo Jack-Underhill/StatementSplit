@@ -12,8 +12,8 @@ Statement Splitter is a lightweight, browser-based personal finance tool for spl
 - No login, no external dependencies, no backend
 
 ## 🚀 Live Demo
-👉 [Launch Visualizer](https://statement-split.netlify.app/)
-👉 [Demo CSV Input](./public/demo_transactions.csv)
+- 👉 [Launch Deployed Site](https://statement-split.netlify.app/)
+- 👉 [View Demo CSV Input](./public/demo_transactions.csv)
 
 ## 🔒 Privacy
 This project runs entirely in the browser. It does not:
