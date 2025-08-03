@@ -12,8 +12,17 @@ import useWindowBreakpoint from './hooks/useWindowBreakpoint'
 
 function App() {
   const [transactions, setTransactions] = useState([]);
-
+  const [defaultTag, setDefaultTag] = useState("🤝");
   const [totalDue, setTotalDue] = useState({ HisPay: 0, HerPay: 0 });
+
+  useEffect(() => {
+    setTransactions(prev => 
+      prev.map(txn => ({
+        ...txn,
+        tag: defaultTag
+      }))
+    );
+  }, [defaultTag]);
 
   useEffect(() => {
     let hisTotal = 0;
@@ -65,7 +74,7 @@ function App() {
               type: row["Type"],
               id: crypto.randomUUID(),
               amount: parseFloat(row["Amount"]),
-              tag: "🤝",
+              tag: defaultTag,
             }));
 
           allTransactions = [...allTransactions, ...cleaned];
@@ -123,9 +132,10 @@ function App() {
         />
         <TransactionTable 
           sectionHClass={sectionHClass}
-          itemBClass={itemBClass}
           transactions={transactions}
           setTransactions={setTransactions}
+          defaultTag={defaultTag}
+          setDefaultTag={setDefaultTag}
         />
         <Summary 
           sectionHClass={sectionHClass} 

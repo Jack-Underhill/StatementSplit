@@ -1,6 +1,6 @@
 import TransactionItem from './TransactionItem'
 
-function TransactionTable({ sectionHClass, itemBClass, transactions, setTransactions }) {
+function TransactionTable({ sectionHClass, transactions, setTransactions, defaultTag, setDefaultTag }) {
     const thClass = "px-4 py-2";
     const tdClass = thClass + " break-words whitespace-normal";
     const trClass = "border-t";
@@ -26,7 +26,20 @@ function TransactionTable({ sectionHClass, itemBClass, transactions, setTransact
                             <th className={`${thClass}`}>Category</th>
                             <th className={`${thClass}`}>Type</th>
                             <th className={`${thClass}`}>Amount</th>
-                            <th className={`${thClass} rounded-tr-lg`}>Pay With</th>
+                            <th className={`${thClass} rounded-tr-lg`}>
+                                <div className='flex gap-2 items-center'>
+                                    <span>Pay With</span>
+                                    <select 
+                                        className="border rounded px-1 py-0.5 text-sm" 
+                                        value={defaultTag}
+                                        onChange={(e) => setDefaultTag(e.target.value)}
+                                    >
+                                        <option value="🤝">🤝</option>
+                                        <option value="😎">😎</option>
+                                        <option value="💅">💅</option>
+                                    </select>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
